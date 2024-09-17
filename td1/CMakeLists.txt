@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.20)
 
 project(TD01)
 
-file(GLOB_RECURSE EXO1 CONFIGURE_DEPENDS src1/*)
-file(GLOB_RECURSE EXO2 CONFIGURE_DEPENDS src2/*)
+file(GLOB_RECURSE EXO1 CONFIGURE_DEPENDS exo1/*)
+file(GLOB_RECURSE EXO2 CONFIGURE_DEPENDS exo2/*)
 
 add_executable(exo1 ${EXO1})
 add_executable(exo2 ${EXO2})
