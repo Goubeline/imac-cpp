@@ -1,0 +1,3 @@
+C:\WinLibs\mingw64\bin\cmake.exe -E rm -f CMakeFiles\exo6.dir/objects.a
+C:\WinLibs\mingw64\bin\ar.exe qc CMakeFiles\exo6.dir/objects.a @CMakeFiles\exo6.dir\objects1.rsp
+C:\WinLibs\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\exo6.dir/objects.a -Wl,--no-whole-archive -o C:\IMAC\C++\td2\bin\Debug\exo6.exe -Wl,--out-implib,libexo6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\exo6.dir\linkLibs.rsp

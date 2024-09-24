@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TD02",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cuisine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cuisine-Debug-f443cf877a0ae67cb3b8.json",
+					"name" : "cuisine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exo1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exo1-Debug-54254ce4d0ba9b04bbc5.json",
+					"name" : "exo1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exo2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exo2-Debug-4f18d9ba388d708bf4d5.json",
+					"name" : "exo2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exo3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exo3-Debug-e602c09e2c467a34dfbd.json",
+					"name" : "exo3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exo4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exo4-Debug-1e6ce07a5bd19efcd4f7.json",
+					"name" : "exo4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exo5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exo5-Debug-cea01d7b900c25c651b7.json",
+					"name" : "exo5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "exo6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-exo6-Debug-f597a90b681dcefca011.json",
+					"name" : "exo6",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/IMAC/C++/td2/build",
+		"source" : "C:/IMAC/C++/td2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

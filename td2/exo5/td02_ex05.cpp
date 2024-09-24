@@ -1,11 +1,20 @@
 #include <iostream>
+#include <limits>
 
 int main()
 {
-    uint lettre;
-    std::cout << "Entrez un nombre entre 1 et 26 : ";
+    unsigned int lettre;
 
+    std::cout << "Entrez un nombre entre 1 et 26 : ";
     std::cin >> lettre;
+    while (std::cin.fail() || std::cin.peek() != '\n')
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Erreur, veuillez entrez un nombre entier positif\n";
+        std::cout << "Entrez un nombre entre 1 et 26 : ";
+        std::cin >> lettre;
+    }
 
     if (lettre - 1 > 25)
     {
