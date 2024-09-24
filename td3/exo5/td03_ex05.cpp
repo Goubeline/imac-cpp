@@ -67,5 +67,5 @@ int main()
     }
     
     std::cout << ((trouve) ? "Bravo, le nombre aléatoire était bien : " : "Dommage, tu as utilisé toutes tes tentatives, le nombre à trouver était : ") << alea << std::endl;
-    return 1;
+    return 0;
 }

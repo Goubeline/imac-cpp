@@ -1,8 +1,8 @@
 #.exe
-/bin/**
+bin/
 
 #garbage
-/build/**
+build/
 
 #vs garbage
-/.vs*
+.vs*/
