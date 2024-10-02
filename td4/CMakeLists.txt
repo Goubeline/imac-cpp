@@ -8,15 +8,14 @@ file(GLOB_RECURSE EXO2 CONFIGURE_DEPENDS exo2/*)
 file(GLOB_RECURSE EXO3 CONFIGURE_DEPENDS exo3/*)
 file(GLOB_RECURSE EXO4 CONFIGURE_DEPENDS exo4/*)
 file(GLOB_RECURSE EXO5 CONFIGURE_DEPENDS exo5/*)
-
-file(GLOB_RECURSE SOLDES CONFIGURE_DEPENDS soldes/*)
+file(GLOB_RECURSE LUHN CONFIGURE_DEPENDS Luhn/*)
 
 add_executable(exo1 ${EXO1})
 add_executable(exo2 ${EXO2})
 add_executable(exo3 ${EXO3})
 add_executable(exo4 ${EXO4})
 add_executable(exo5 ${EXO5})
-add_executable(soldes ${SOLDES})
+add_executable(luhn ${LUHN})
 
 set_target_properties(exo1 PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
@@ -28,5 +27,5 @@ set_target_properties(exo4 PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
 set_target_properties(exo5 PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})
-set_target_properties(soldes PROPERTIES
+set_target_properties(luhn PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/${CMAKE_BUILD_TYPE})

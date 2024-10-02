@@ -1,71 +1,65 @@
-#include <cstdlib>
-#include <ctime>
 #include <iostream>
+#include <vector>
 #include <limits>
 
-int wrong_type()
-{
-    int x;
 
-    do
+void table_writer(std::vector<char> table)
+{
+    std::cout << '[';
+    for (size_t i = 0; i < table.size() - 1; i++)
     {
-        std::cout << "Saisir un nombre de tentatives : ";
-        std::cin >> x;
-        if (!std::cin.fail() && std::cin.peek() == '\n')
-        {
-            break;
-        }
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "La valeur entrée doit être un nombre entier\n";
-    } while(true);
-    
-    return x;
+        std::cout << table[i] << ", ";
+    }
+    std::cout << table[table.size() - 1] << ']' << std::endl;
 }
 
 int main()
 {
-  // Initialisation du générateur de nombres aléatoires avec la fonction time()
-    std::srand(std::time(nullptr));
-    int alea = std::rand() % 100 + 1;
-    int max = wrong_type();
-    bool trouve = false;
-    int essai;
-
-    for (int tentative = 0; tentative < max; tentative++)
+    std::vector<char> entiers {};
+    char c;
+    do
     {
-        std::cout << "Entrez un nombre entre 1 et 100: ";
-        std::cin >> essai;
-        if (essai < 0)
+        std::cout << "Saisir 10 chiffres entre 0 et 5 : ";
+        while (std::cin.get(c))
         {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Il nous faut un nombre positif\n";
-            continue;
-        }
-        if (!std::cin.fail() && std::cin.peek() == '\n')
-        {
-            if (essai > alea)
+            if (c == 10)
             {
-                std::cout << essai << " est plus grand que le nombre aléatoire\n";
-            
-            }
-            else if (essai < alea)
-            {
-                std::cout << essai << " est plus petit que le nombre aléatoire\n";
-            }
-            else
-            {
-                trouve = true;
+                if (entiers.size() != 10)
+                {
+                    std::cin.clear();
+                    std::cout << "Il faut 10 chiffres entre 0 et 5" << std::endl;
+                    c = 0;
+                }                
                 break;
             }
-            continue;
+            if (!(c >= '0' && c<= '5'))
+            {
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Il ne faut que des chiffres entre 0 et 5" << std::endl;
+                entiers.clear();
+                break;
+            }
+            entiers.push_back(c);
         }
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "La valeur entrée doit être un nombre entier\n";
+
+    } while(c != 10);
+
+    std::cout << "Votre liste avant modification" << std::endl;
+    table_writer(entiers);
+
+    int nb3 = 0;
+    for (size_t i = 0; i < entiers.size() - nb3; i++)
+    {
+        if (entiers[i] == '3')
+        {
+            entiers.erase(entiers.begin() + i);
+            entiers.push_back('0');
+            nb3++;
+        }
     }
-    
-    std::cout << ((trouve) ? "Bravo, le nombre aléatoire était bien : " : "Dommage, tu as utilisé toutes tes tentatives, le nombre à trouver était : ") << alea << std::endl;
+
+    std::cout << "Votre liste après modification" << std::endl;
+    table_writer(entiers);
     return 0;
 }
